@@ -15,12 +15,17 @@
  */
 package com.example.android.miwok;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import javax.xml.datatype.Duration;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,18 +37,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Find the View that shows the numbers category
-        TextView numbers = (TextView) findViewById(R.id.numbers);
+        final TextView numbers = (TextView) findViewById(R.id.numbers);
 
         // Set a click listener on that View
         numbers.setOnClickListener(new OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link NumbersActivity}
+                // Create a new intent to open the NumbersActivity}
                 Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
 
                 // Start the new activity
                 startActivity(numbersIntent);
+
             }
         });
 
@@ -55,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the family category is clicked on.
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link FamilyActivity}
+                // Create a new intent to open the FamilyActivity
                 Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
 
                 // Start the new activity
@@ -64,14 +70,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Find the View that shows the colors category
-        TextView colors = (TextView) findViewById(R.id.colors);
+        final TextView colors = (TextView) findViewById(R.id.colors);
 
         // Set a click listener on that View
         colors.setOnClickListener(new OnClickListener() {
             // The code in this method will be executed when the colors category is clicked on.
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link ColorsActivity}
+                // Create a new intent to open the ColorsActivity
                 Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
 
                 // Start the new activity
@@ -87,12 +93,14 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the phrases category is clicked on.
             @Override
             public void onClick(View view) {
-                // Create a new intent to open the {@link PhrasesActivity}
+                // Create a new intent to open the PhrasesActivity
                 Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
 
                 // Start the new activity
                 startActivity(phrasesIntent);
             }
         });
+
+
     }
 }
