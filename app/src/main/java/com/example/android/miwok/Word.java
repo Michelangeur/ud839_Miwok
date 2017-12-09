@@ -10,7 +10,7 @@ public class Word {
     private String mMiwokTranslation;  // miwok word
 
     // Image resource ID for the word.
-    private int mImageResourceId;
+    //private int mImageResourceId;
     private int mImageREsourceId = NO_IMAGE_PROVIDED; // for the view that doesn't have image.
 
     // Constant value that represents no image was provided for this word.
@@ -26,7 +26,7 @@ public class Word {
     public Word(String defaultTranslation, String miwokTranslation, int imageResourceId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
-        mImageResourceId = imageResourceId;
+        mImageREsourceId = imageResourceId;
     }
 
     public String getDefaultTranslation() {
@@ -38,12 +38,12 @@ public class Word {
     }
 
     public int getImageResourceId() {
-        return mImageResourceId;
+        return mImageREsourceId;
     }
 
     // Return whether or not there is an image for this word.
     public boolean hasImage() {
-        return mImageResourceId != NO_IMAGE_PROVIDED;
+        return mImageREsourceId != NO_IMAGE_PROVIDED;
     }
 
 }

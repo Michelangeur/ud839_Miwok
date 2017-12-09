@@ -44,8 +44,9 @@ public class FamilyActivity extends AppCompatActivity {
                 The ADAPTER knows how to create LAYOUTS for each item in the LIST by using
                 custom list_item.xml layout resource defined in the android framework.
                 This list item layout contains a single TextView which the adapter will set to display a single word.
+                R.color.category_ sets background color of the category parent to the childView
              */
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words, R.color.category_family);
 
         // find the ListView object in the view hierarchy of the ACTIVITY. There should be a ListView with the view ID called 'list'
         // which is declared in the word_list.xml file.
